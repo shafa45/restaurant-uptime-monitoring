@@ -84,7 +84,6 @@ def compute_uptime_downtime(store_id, start_time, end_time):
     # get the store hours for the day of the start time
     day_of_week = start_time_utc.weekday()
     store_hours = session.query(StoreHours).filter_by(store_id=store_id, day=day_of_week).all()
-    print('store_hours',store_hours)
     
     # if there are no store hours for the day, assume it is open 24*7
     if not store_hours:
