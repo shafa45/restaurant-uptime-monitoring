@@ -1,0 +1,9 @@
+# WebFramework: Flask
+# ORM: SQLAlchemy
+# Database: PostgreSQL
+
+I used SQLAlchemy to create a schema that matched the structure of the CSV files. Then, I used pandas to read the CSV files and wrote the data to the database.
+I created two functions to compute the uptime and downtime for each store in the last hour, day and week. I used pandas to filter the data by store and time range and then computed the uptime and downtime.
+I created a Flask app with two endpoints - /trigger_report and /get_report. The /trigger_report endpoint triggered the computation of the report and returned a report id. The /get_report endpoint returned the status of the report or the CSV file.
+Conclusion
+In this solution, I have shown how to ingest CSV files into a database, compute the uptime and downtime for each store in the last hour, day and week, and generate a report in CSV format. I used Flask as my web framework, SQLAlchemy as my ORM, and PostgreSQL as my database. I also used pandas to filter and aggregate the data. The solution was scalable and could handle large amounts of data
